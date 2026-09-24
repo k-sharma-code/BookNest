@@ -155,6 +155,11 @@ nav {
     font-size: 14px;
     
 }
+.author{
+    color: beige;
+    font-style: italic;
+    
+}
 
 .book-card button:hover{
     background-color: #d4a942;
