@@ -5,20 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookNest | Cart Product</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <link rel="stylesheet" href="book.css">
+    <link rel="stylesheet" href="style/book.css">
 </head>
 <body>
     <nav>
-        <div class="logo"><img src="https://i.pinimg.com/736x/c6/09/54/c60954fbcc15aa1585bb336aea8cf75f.jpg" alt="BookNest logo" class="logo-img">
-            <span>BookNest</span></div>
+       <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+        <div class="logo"><img src="https://i.pinimg.com/736x/c6/09/54/c60954fbcc15aa1585bb336aea8cf75f.jpg"alt="BookNest logo" class="logo-img">
+            <span>BookNest</span>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="search books...">
+            <button type="button" id="searchBtn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
         <ul class="nav-links">
             <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
             <li><a href="product.html"><i class="fa-solid fa-book"></i>Product</a></li>
             <li><a href="about.html"><i class="fa-solid fa-circle-info"></i>About</a></li>
             <li><a href="contact.html"><i class="fa-solid fa-envelope"></i>Contact</a></li>
-            <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>Cart <span id="cart-cont">0</span></a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>Cart <span class="js-cart-quantity" id="cart-cont">0</span></a></li>
         </ul>
-    </nav>
+   </nav>
     
 
 
