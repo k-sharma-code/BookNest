@@ -6,6 +6,7 @@
     <title>BookNest | Cart Product</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <link rel="stylesheet" href="style/book.css">
+    <link rel="stylesheet" href="style/cart.css">
 </head>
 <body>
     <nav>
@@ -32,24 +33,86 @@
             <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>Cart <span class="js-cart-quantity" id="cart-cont">0</span></a></li>
         </ul>
    </nav>
+   
+   <section class="cart-page">
+
+        <h1 class="cart-title">Your Cart <span class="js-cart-heading-count">(2 items)</span></h1>
+
+        <div class="cart-layout">
+
+            <div class="cart-items js-cart-items">
+
+                <article class="cart-item">
+                    <img class="cart-item-img" src="https://i.pinimg.com/736x/d7/54/0d/d7540d9b97446cc582fce6cddcb93177.jpg" alt="The Silent Patient book cover">
+                    <div class="cart-item-info">
+                        <h3 class="cart-item-name">The silent patient</h3>
+                        <p class="cart-item-author">by Alex Michaelides</p>
+                        <p class="cart-item-price">&#8377;299</p>
+                        <div class="cart-item-actions">
+                            <div class="qty-control">
+                                <button type="button" class="qty-btn" aria-label="Decrease quantity">&minus;</button>
+                                <span class="qty-value">1</span>
+                                <button type="button" class="qty-btn" aria-label="Increase quantity">+</button>
+                            </div>
+                            <button type="button" class="remove-btn"><i class="fa-solid fa-trash"></i> Remove</button>
+                        </div>
+                    </div>
+                    <p class="cart-item-total">&#8377;299</p>
+                </article>
+
+                <article class="cart-item">
+                    <img class="cart-item-img" src="https://i.pinimg.com/736x/3b/33/47/3b33471bcf6aed115538aa4e6cdadece.jpg" alt="Shadows that whisper book cover">
+                    <div class="cart-item-info">
+                        <h3 class="cart-item-name">Shadows that whisper</h3>
+                        <p class="cart-item-author">by Guy Adam</p>
+                        <p class="cart-item-price">&#8377;329</p>
+                        <div class="cart-item-actions">
+                            <div class="qty-control">
+                                <button type="button" class="qty-btn" aria-label="Decrease quantity">&minus;</button>
+                                <span class="qty-value">2</span>
+                                <button type="button" class="qty-btn" aria-label="Increase quantity">+</button>
+                            </div>
+                            <button type="button" class="remove-btn"><i class="fa-solid fa-trash"></i> Remove</button>
+                        </div>
+                    </div>
+                    <p class="cart-item-total">&#8377;658</p>
+                </article>
+
+            </div>
+
+            <aside class="order-summary">
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Items (<span class="js-summary-count">3</span>):</span>
+                    <span class="js-summary-items-total">&#8377;957</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span class="summary-free">FREE</span>
+                </div>
+
+                <div class="summary-row summary-total">
+                    <span>Order total:</span>
+                    <span class="js-summary-order-total">&#8377;957</span>
+                </div>
+
+                <button type="button" class="place-order-btn js-place-order">Place your order</button>
+                <a href="productcopy.html" class="continue-link">Continue shopping</a>
+            </aside>
+
+        </div>
+
+        <div class="empty-cart js-empty-cart" hidden>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h2>Your cart is empty</h2>
+            <p>Add a book you love and it will show up here.</p>
+            <a href="productcopy.html">Browse books</a>
+        </div>
+
+    </section>
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <footer>
         <div class="footer-container">
             <div class="footer-col">
