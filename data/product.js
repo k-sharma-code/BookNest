@@ -1,4 +1,4 @@
-const products = [{
+export const products = [{
     id:    crypto.randomUUID(),
     image: 'https://i.pinimg.com/736x/3b/33/47/3b33471bcf6aed115538aa4e6cdadece.jpg',
     name:  'Shadow that whisper',
