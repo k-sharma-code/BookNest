@@ -1,4 +1,4 @@
-import { cart ,removeFromCart} from "../data/cart.js";
+import { cart ,removeFromCart , updateCartQuantity} from "../data/cart.js";
 import { products } from "../data/product.js";
 
 let cartSummaryHTML ='';
@@ -14,7 +14,7 @@ cart.forEach((cartItem) => {
     });
 
     cartSummaryHTML +=`
-     <article class="cart-item">
+     <article class="cart-item js-cart-item-${matchingProduct.id}">
             <img class="cart-item-img" src="${matchingProduct.image}">
             <div class="cart-item-info">
                 <h3 class="cart-item-name">${matchingProduct.name}</h3>
@@ -41,8 +41,14 @@ document.querySelectorAll('.js-remove-btn')
         btn.addEventListener('click', () => {
             const productId = btn.dataset.productId;
             removeFromCart(productId);
+
+            const container = document.querySelector(`
+               .js-cart-item-${productId}
+            `);
             
+            container.remove();
+            updateCartQuantity();
             
         });
     });
-
+updateCartQuantity();
