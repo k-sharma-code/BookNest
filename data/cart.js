@@ -1,4 +1,12 @@
-export const cart = [];
+import { products } from "./product.js";
+
+export const cart = [{
+    productId: '1',
+    quantity: 1
+},{
+    productId: '2',
+    quantity: 2
+}]
 
 export function addToCart (productId) {
      let matchingItem;
