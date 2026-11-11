@@ -1,4 +1,4 @@
-export let cart = JSON.parse(localStorage.getItem('cart'));
+export let cart = JSON.parse(localStorage.getItem('booknestCart'));
 
 if(!cart) {
     cart = [{
@@ -12,7 +12,7 @@ if(!cart) {
 
 
 function saveToStorage() {
-    localStorage.setItem('cart' , JSON.stringify(cart))
+    localStorage.setItem('booknestCart' , JSON.stringify(cart))
 }
 
 export function addToCart (productId) {
@@ -52,11 +52,17 @@ export function removeFromCart(productId) {
 }
 
 export function updateCartQuantity() {
+     let cartQuantity = calculateCartQty();
+
+        document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+}
+
+export function calculateCartQty () {
      let cartQuantity = 0;
         
         cart.forEach((cartItem) => {
             cartQuantity += cartItem.quantity;
         });
 
-        document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+    return cartQuantity;
 }
